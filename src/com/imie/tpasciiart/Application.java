@@ -12,8 +12,9 @@ public class Application {
 		String[] message;
 		VotreAlphabet alphabet = new VotreAlphabet();
 		AsciiManager manager = new AsciiManager(alphabet);
+		System.out.println("Quel message veux-tu voir ?");
 		message = manager.getAsciiTranslation(ScannerProvider.getInstance().getScanner().nextLine());
-		for(int i = 0; i < 5; i++){
+		for(int i = 0; i < alphabet.getH(); i++){
 			System.out.println(message[i]);
 		}
 			
