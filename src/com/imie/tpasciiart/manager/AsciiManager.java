@@ -23,18 +23,17 @@ public class AsciiManager {
 
                 for (int k = 0; k < sizeT; k++)
                 {
-                    if (tabT[k] >= 65 && tabT[k] <= 90)
+                    if (tabT[k] >= 'a' && tabT[k] <= 'z')
                     {
-                        to_show[i] += (ROW.substring(((tabT[k] - 65) * w), ((tabT[k] - 65) * w + w)));
+                        to_show[i] += (ROW.substring(((tabT[k] - 'a') * w), ((tabT[k] - 'a') * w + w)));
                     }
-                    else if (tabT[k] >= 97 && tabT[k] <= 122)
+                    else if (tabT[k] >= 'A' && tabT[k] <= 'Z')
                     {
-                        to_show[i] += (ROW.substring(((tabT[k] - 97) * w), ((tabT[k] - 97) * w + w)));
+                        to_show[i] += (ROW.substring(((tabT[k] - 'A') * w), ((tabT[k] - 'A') * w + w)));
                     }
                     else
                         to_show[i] += (ROW.substring((26 * w), (26 * w + w)));
                 }
-                //to_show[i] += "\n";
         }
         return to_show;
 	}
